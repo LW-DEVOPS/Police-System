@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQS PAGE</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .container {
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            background-color: #f2f2f2;
+            width: 70%;
+            margin-left: 15%;
+            margin-right: 15%;
+
+        }
+
+        h1 {
+            text-align: center;
+            font-family: "Roboto Slab", serif;
+            font-size: 40px;
+            text-transform: uppercase;
+
+        }
+
+        li {
+            list-style: none;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-bottom: 2px solid #6d6b6b;
+        }
+
+        .question {
+            font-family: Segoe UI;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            position: relative;
+            color: #5c5a5a;
+        }
+
+        .icon-main {
+            position: absolute;
+            right: 0px;
+            cursor: pointer;
+        }
+
+        .non-active {
+            display: none;
+        }
+
+        .answer {
+            font-size: 17px;
+            font-family: Segoe UI;
+            font-weight: 500;
+        }
+    </style>
+    <title>FAQs</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>FAQs</h1>
+        <ul>
+            <li class="faq">
+                <div class="question">
+                    Where to get the police abstract?
+                    <span class="icon-main">
+                        <i class="arrowdown">
+                            <img src="images/arrowdown.png" alt="">
+                        </i>
+                    </span>
+                </div>
+                <div class="answer non-active">
+                    What are the Kenya police entry requirement?
+                </div>
+            </li>
+            <li class="faq">
+                <div class="question">
+                    What does a certificate of good conduct mean?
+                    <span class="icon-main">
+                        <i class="arrowdown">
+                            <img src="images/arrowdown.png" alt="">
+                        </i>
+                </div>
+                <p class="answer non-active">
+                    What are the Kenya police entry requirement?
+                </p>
+
+            </li>
+            <li class="faq">
+                <div class="question">
+                    Who can be given a certificate of good conduct?
+                    <span class="icon-main">
+                        <i class="arrowdown">
+                            <img src="images/arrowdown.png" alt="">
+                        </i>
+             <li class="faq">
+                <div class="question">
+                    What are the Kenya police entry requirement?
+                    <span class="icon-main">
+                        <i class="arrowdown">
+                            <img src="images/arrowdown.png" alt="">
+                        </i>
+                        <li class="faq">
+                            <div class="question">
+                                What are the Kenya police entry requirement?
+                                <span class="icon-main">
+                                    <i class="arrowdown">
+                                        <img src="images/arrowdown.png" alt="">
+                                    </i>            
+                </div>
+                <p class="answer non-active">
+                    How long does the certificate of good conduct take before it is provided?
+
+
+                <p class="answer non-active">
+                    Where to get the police abstract?
+                </p>
+    <script>
+        // Toggle FAQs on click of icon
+        document.querySelectorAll('.icon-main').forEach(function(icon) {
+            icon.addEventListener('click', function() {
+                var answer = this.parentElement.nextElementSibling;
+                if (answer.classList.contains('non-active')) {
+                    answer.classList.remove('non-active');
+                    this.innerHTML = '<i class="arrowup"><img src="images/arrowup.png"></i>';
+                } else {
+                    answer.classList.add('non-active');
+                    this.innerHTML = '<i class="arrowdown"><img src="images/arrowdown.png"></i>';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
